@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phoenix Energy</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    
+    <style>
+        /* Технічний стиль для роботи перемикання сторінок */
+        .page { display: none; }
+        .active { display: block; }
+    </style>
+</head>
+<body>
+
+    <div id="index-page" class="container page active">
+        <h1>Phoenix Energy</h1>
+        <p>Мельниківський ліцей</p>
+        <div class="links">
+            <a href="https://www.instagram.com/phoenix.energy_?igsh=MTlrMWc2bHdrNXhscA%3D%3D" class="btn">Наш Instagram</a>
+            <a href="https://www.instagram.com/p/DQuZpWvjZET/?utm_source=ig_web_button_share_sheet&igsh=MzRlODBiNWFlZA==" class="btn">Наша перша MVP подія</a>
+            <a href="https://www.instagram.com/reel/DRmmNARiAdF/?utm_source=ig_web_button_share_sheet&igsh=MzRlODBiNWFlZA==" class="btn">Тренінг з діалогу</a>
+            <a href="https://docs.google.com/spreadsheets/d/1J8IDv4Z4mDTmgLM0ixUenuq5trPiyRS-_l6WAdELmL4/edit?usp=sharing" class="btn">Наш бюджет</a>
+            <a href="javascript:void(0)" onclick="showPage('participants-page')" class="btn">Посилання на наших учасників</a>
+        </div>
+    </div>
+
+    <div id="participants-page" class="container page">
+        <h1>Учасники Phoenix Energy</h1>
+        <div class="links">
+            <a href="https://www.instagram.com/anastacia.shapoval/" class="btn">Анастасія Шаповал</a>
+            <a href="https://www.instagram.com/annapasechnik4198?igsh=eHdzYjl5NnB1MjIx" class="btn">Ганна Пасіchnik</a>
+            <a href="https://www.instagram.com/18_anastasi_11/?utm_source=ig_web_button_share_sheet" class="btn">Анастасія Спільник</a>
+            <a href="https://www.instagram.com/andrejskotarenko4?igsh=eWhqeGxzNjhpYXRt" class="btn">Андрій Скотаренко</a>
+            <a href="https://www.instagram.com/m0rblinn?igsh=MW5tMndyc2c0cTN4Mg==" class="btn">Анна Коробка</a>
+            <a href="https://www.instagram.com/_hrebinetsdasha_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D" class="btn">Дар’я Гребінець</a>
+            <a href="https://www.instagram.com/dimamel69?igsh=dHFjc3F0Y3IzazBj" class="btn">Дмитро Мельник</a>
+            <a href="javascript:void(0)" onclick="showPage('evgen-page')" class="btn">Євген Полтавський</a>
+            <a href="https://www.instagram.com/yano_4_ka?igsh=MTl6YWhsd2hsaXJsZA==" class="btn">Яна Маріян</a>
+        </div>
+        <a href="javascript:void(0)" onclick="showPage('index-page')" class="back-btn-inline">Назад</a>
+    </div>
+
+    <div id="evgen-page" class="container page">
+        <h1>Соц. мережі Євгена</h1>
+        <div class="links">
+            <a href="https://www.instagram.com/evgengrebinets/" class="btn">Інстаграм</a>
+            <a href="https://t.me/amorlife_e" class="btn">Телеграм канал</a>
+            <a href="https://freelancehunt.com/freelancer/Amor_.html" class="btn">Freelancehunt</a>
+            <a href="https://www.work.ua/resumes/11055654/?puid=830102" class="btn">Work.ua</a>
+        </div>
+        <a href="javascript:void(0)" onclick="showPage('participants-page')" class="back-btn-inline">Назад</a>
+    </div>
+
+    <script>
+        // Функція для перемикання між секціями без перезавантаження сторінки
+        function showPage(pageId) {
+            // Приховати всі сторінки
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(p => p.classList.remove('active'));
+
+            // Показати вибрану сторінку
+            const selectedPage = document.getElementById(pageId);
+            if (selectedPage) {
+                selectedPage.classList.add('active');
+                window.scrollTo(0, 0); // Повернення вгору при зміні сторінки
+            }
+        }
+    </script>
+
+</body>
+</html>
