@@ -1,0 +1,23 @@
+{
+  "name": "Acer Ukraine",
+  "bio": "Офіційна сторінка Acer в Україні",
+  "avatar": "https://upload.wikimedia.org/wikipedia/commons/8/87/Acer_Logo.svg",
+  "links": [
+    {
+      "title": "🌐 Офіційний сайт",
+      "url": "https://www.acer.com/ua-uk"
+    },
+    {
+      "title": "📘 Facebook",
+      "url": "https://www.facebook.com/AcerUA"
+    },
+    {
+      "title": "📸 Instagram",
+      "url": "https://www.instagram.com/acerukraine/"
+    },
+    {
+      "title": "🛒 Магазин",
+      "url": "https://store.acer.com/"
+    }
+  ]
+}
